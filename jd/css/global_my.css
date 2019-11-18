@@ -1,0 +1,406 @@
+/*这个文件用来保存网站相同的头部和尾部的css*/
+
+/*快捷导航shortcut开始*/
+.shortcut{
+	height: 30px;
+	line-height: 30px;
+	background-color: #e3e4e5;
+	border-bottom: 1px solid #dddddd;
+}
+.shortcut, .hotwords a{
+	color: #999;
+}
+.shortcut li{
+	float: left;
+	padding: 0 12px;
+}
+.shortcut .line{
+	height: 10px;
+	width: 1px;
+	background-color: #ccc;
+	padding: 0;
+	margin-top: 9px;
+}
+.dorpdown i{
+	font: "微软雅黑";
+}
+.shortcut, .hotwords .color_red{
+	color: #e1251b;
+}
+/*快捷导航shortcut结束*/
+
+/*首部搜索框header开始*/
+.header{
+	position: relative;
+	height: 140px;
+	border-bottom: 1px solid #ddd;
+}
+.jd_logo{
+	width: 190px;
+	height: 140px;
+}
+.jd_logo img{
+	padding: 25px 60px;
+}
+.search{
+	height: 140px;
+	width: 810px;	
+}
+.quick_search{
+	width: 740px;
+	height: 70px;
+	margin: 25px 0 0 70px;
+}
+.form{
+	height: 36px;
+}
+.search_input{
+	width: 546px;
+/*	height: 32px;*/
+/*	border: 2px solid #e2231a;*/
+	background-color: #BBFFAA;
+}
+.search_input input{
+	height: 32px;
+	width: 488px;
+	border: 2px solid #e2231a;
+	border-right: 0;
+	padding: 0;
+}
+.search_input button{
+	float: right;
+	width: 56px;
+	border:0;
+	padding: 0;
+	height: 36px;	
+	background-color: #e2231a;
+	color: white;
+}
+.shop_car{
+	margin-left: 18px;
+	height: 34px;
+	width: 130px;
+	border: 1px solid #eee;
+}
+.shop_car a{
+	color: #e1251b;
+	line-height: 34px;
+}
+.hotwords{
+	height: 34px;
+}
+.hotwords li{
+	float: left;
+	height: 11px;
+	padding: 9px 9px 13px 0;
+}
+.hotwords a{
+	/*color: #999;*/
+}
+.navitems li{
+	float: left;
+	height: 13px;
+	padding: 20px 0 12px 22px;
+}
+.brand_logo{
+	width: 190px;
+}
+.brand_logo img{
+	padding: 11px 2.5px;
+}
+/*首部搜索框header结束*/
+
+/*产品分类及轮播部分fs开始*/
+.fllb{ /*分类轮播*/
+	background-color: #f3f3f3;	
+}
+.fs{
+	padding-top: 10px;
+	height: 470px;
+/*	background-color: #BBFFAA;*/
+}
+.fs_col1{
+	width: 190px;
+	height: 470px;
+	background-color: white;
+}
+.fs_col1 ul{
+	padding: 17px 0 0 13px;
+}
+.fs_col1 li{
+	font-size: 15px;
+	line-height: 25px;
+}
+.fs_col2{
+	margin: 0 10px;
+	width: 790px;
+	height: 470px;
+}
+.banner{
+	width: 590px;
+	height: 470px;
+	position: relative;
+}
+.slider{
+	width: 113px;
+	height: 15px;
+	position: absolute;
+	left: 30px;
+	bottom: 18px;
+}
+.slider li{
+	float: left;
+	width: 8px;
+	height: 8px;
+	margin-right: 4px;
+	border: 1px solid rgba(0,0,0,.05);
+	border-radius: 50%; /*圆角矩形*/
+	background: rgba(225,225,225,.4);
+}
+.arr_l, .arr_r{
+	width: 25px;
+	height: 35px;
+	background:rgba(0,0,0,.3);
+	position: absolute;
+	top:50%;
+	margin-top: -17px;	
+	color: white;
+	font-family: simsun;
+	line-height: 35px;
+	text-align: center;
+}
+.arr_l{
+	left: 0;
+	border-radius: 0 70% 70% 0
+}
+.arr_r{
+	right: 0;
+	border-radius: 70% 0 0 70%;
+}
+.recmmend{
+	width: 190px;
+	height: 470px;
+}
+.rec_1, .rec_2, .rec_3{
+	height: 150px;
+	width: 190px;
+}
+.rec_1{
+	background-color: #0000FF;
+}
+.rec_2{
+	margin: 10px 0;
+	background-color: #666666;
+}
+.rec_3{
+	background-color: #800080;
+}
+.fs_col3{
+	width: 190px;
+	height: 470px;
+	background-color: white;
+}
+.user{
+	height: 102px;
+}
+.user:after{
+	position: absolute;
+	height: 1px;
+	left: 15px;
+	right: 15px;
+	background: linear-gradient(270deg,white,#eeeeee,#eeeeee,white);
+	content: " ";
+	bottom: 0;
+}
+.user_1{
+	height: 67px;
+}
+.portrait{
+	padding: 12px 10px 10px 20px;
+}
+.portrait img{
+	display: block;
+	overflow: hidden;
+	height: 40px;
+	width: 40px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+}
+.login{
+	padding-top: 20px;
+}
+.user_2{
+	margin: 0 20px;
+}
+.user_2 a{
+	display: inline-block;
+	width: 70px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 12px;
+}
+.new_people{
+	background-color: #e1251b;
+	color: white;
+}
+.plus{
+	background-color: #363634;
+	color: #e5d790;
+}
+.news{
+	height: 130px;
+	padding: 0 15px;
+}
+.news_hd{
+	padding: 15px 0 10px 0;
+}
+.news_hd a{
+	color: #999;
+	font-size: 12px;
+}
+.news_tit{
+	font-size: 14px;
+	color: #333;
+}
+.news_list{
+	position: relative;
+	height: 88px;
+
+}
+.news_list li{
+	height: 22px;
+	overflow: hidden;
+	white-space: nowrap;  /*省略的三个点*/
+	text-overflow: ellipsis;
+}
+.news_list span{
+	display: inline-block;
+	width: 35px;
+	line-height: 16px;
+	height: 16px;
+	background-color: #fdeeed;
+	color: #e1251b;
+	text-align: center;
+	margin-right: 5px;
+}
+.service{
+	height: 238px;
+}
+.service ul{
+	height: 230px;
+	padding: 8px 0.5px 0 0.5px;
+}
+.service ul li{
+	float: left;
+	width: 63px;
+	height: 55px;
+}
+.service li i{
+	height: 28px;
+	width: 28px;
+	margin: 0 17.5px;
+}
+.service li span{
+	display: block;
+	height: 28px;
+	width: 63px;
+	line-height: 28px;
+	text-align: center;
+	color: #333
+}
+/*产品分类及轮播部分fs结束*/
+
+/*网页底部footer开始*/
+.footer{
+	margin-top: 500px;
+	height: 565.6px;
+	background-color: #f4f4f4;
+}
+.slogan{
+	height: 102px; 
+	border-bottom: 1px solid #dedede;
+}
+.slogan ul{
+	height: 42px;
+	padding: 30px 35px;
+}
+.slogan li{
+	width: 206px;
+	float: left;
+}
+.slogan h5{
+	display: inline-block;
+	width: 40px;
+	height: 42px;
+	text-indent: -999px;
+}
+.slogan span{
+	display: inline-block;
+	height: 42px;
+	line-height: 42px;
+	width: 162px;
+	font-size: 18px;
+	font-weight: 700;
+	float: right;
+}
+.slogan .none{
+	width: 91px;
+	height: 42px;
+}
+.jd_duo{
+	background: url(../img/footer.png) no-repeat;
+	background-position: 0 -192px;
+}
+.jd_kuai{
+	background: url(../img/footer.png) no-repeat;
+	background-position: -40px -192px;
+}
+.jd_hao{
+	background: url(../img/footer.png) no-repeat;
+	background-position: -80px -192px;
+}
+.jd_sheng{
+	background: url(../img/footer.png) no-repeat;
+	background-position: -120px -192px;
+}
+.help{
+	height: 160px;
+	padding: 20px;
+}
+.help_nav{
+	width: 197px;
+	float: left;
+	line-height: 22px;
+}
+.help_nav_title{
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.help_cover{
+	float: right;
+	width: 200px;
+	height: 150px;
+	background: url(../img/footer.png) no-repeat;	
+}
+.help_cover_title{
+	font-size: 14px;
+	margin-bottom: 22px;
+	text-align: center;
+}
+.help_cover_con{
+	padding: 0 8px;
+}
+.help_cover_more{
+	text-align: right;
+}
+.copyright{
+	height: 220px;
+	background-color: #ddd;
+}
+.copyright_links{
+	height: 50px;
+	padding: 19px 53px;
+	background-color: #BBFFAA;
+}
+/*网页底部footer结束*/

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box</title>
+    <style>
+        /*div{*/
+            /*background-color: red;*/
+            /*display: inline-block;*/
+            /*width: 300px;*/
+            /*height: 100px;*/
+        /*}*/
+        span{
+            background-color: yellow;
+            display: block;
+            width: 300px;
+            height: 100px;
+        }
+        .div1{
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            background-color: deeppink;
+            border: 10px solid black;
+        }
+        .div2{
+            box-sizing: content-box;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            background-color: green;
+            border: 10px solid yellow;
+        }
+
+        [class*=clip]{
+            background-color: black;
+            color: aquamarine;
+            border: 10px solid green;
+            margin-top: 40px;
+            padding: 10px;
+            background-image: url("service_icon.png");
+            background-repeat: no-repeat;
+        }
+        .clip1{
+            background-clip: border-box;
+            background-origin: border-box;
+            border-radius: 1.5em;
+        }
+        .clip2{
+            background-clip: padding-box;
+            background-origin: padding-box;
+        }
+        .clip3{
+            background-clip: content-box;
+            background-origin: content-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div>This is a div</div>
+    <div>This is a div</div><br/>
+    <span>This is a span</span>
+    <span>This is a span</span>
+
+    <!--box-sizing-->
+    <div class="div1"></div>
+    <div class="div2"></div>
+
+    <!--background-clip-->
+    <div class="clip1">实例11111</div>
+    <div class="clip2">实例22222</div>
+    <div class="clip3">实例33333</div>
+    <div class="clip4">实例44444</div>
+</body>
+</html>

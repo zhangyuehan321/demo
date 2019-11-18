@@ -1,0 +1,305 @@
+/*这里设置主页index的样式*/
+
+/*为body设置背景图片*/
+body{
+	background: url(../img/body_bgimage.png) repeat-x;
+}
+
+/* 为浏览器设置固定的宽度 */
+#main{
+	width:953px;
+	margin:0 auto;
+}
+
+/*为最上面的div设置样式begin*/
+.header_top{
+	padding-left: 140px;
+	height: 22px;
+/*	background-color: greenyellow;*/
+	font-size: 12px;
+}
+.top li{
+	float: left;
+	border-right: solid #8c0000;
+	padding: 6px;
+}
+/*为最上面的div设置样式end*/
+
+/*为上中部div【天猫、搜索框】设置样式begin*/
+.header_center{
+	height: 70px;
+/*	background-color: greenyellow;*/
+}
+/*为天猫logo设置样式*/
+.tm_icon{
+/*	background-color: #bfa;*/
+	padding: 26px 26px 0 0;
+}
+/*为搜索框设置浮动及上边距*/
+.search{
+	float: right;
+	padding-top: 10px;
+}
+/*为搜索框中的输入框设置大小*/
+.search_input{
+	width:320px;
+	height: 35px;
+	border: none;
+	outline: none;
+}
+/*两个按钮*/
+button{
+	width: 60px;
+	height: 35px;
+	border: none;
+	outline: none;
+}
+.b_tm{/*搜天猫按钮*/
+	background-color: #5b4239;
+}
+.b_bd{/*搜本店按钮*/
+	background-color: #cf0f0f;
+}
+/*为上中部div【天猫、搜索框】设置样式end*/
+
+/*为上下部div【店铺描述】设置样式begin*/
+.header_bottom{
+	height: 40px;
+	text-align: right;
+/*	background-color: yellow;*/
+}
+.shop_desc{/*店铺描述*/
+	font-size: 11px;
+/*	padding: 15px 0; 当height和line-height相等时，可以设置垂直居中*/
+	line-height: 40px;
+}
+.dianpu{/*店铺这两个字*/
+	color: #fe584a;
+}
+.shop_icon{/*店铺描述最右边的图标*/
+	height: 17px;
+	width: 110px;
+	float: right;
+	line-height: 40px;
+}
+/*为上下部div【店铺描述】设置样式end*/
+
+/*为logo行设置样式begin*/
+.logo_line{/*整个logo行的高度*/
+	height: 98px;
+}
+.logo{/*店铺logo的位置*/
+	padding: 10px 0 10px 2px;
+}
+.book_mark{/*右侧收藏店铺位置及特殊字体*/
+	float: right;
+	color: #2d3263;
+	padding: 15px 0 22px 0;
+}
+.book_mark a{
+	color: #2d3263;
+	display: inline-block;
+	width: 25px;
+	height: 24px;
+	font-size: 10px;
+}
+.book_mark p{
+	font-size: 21px;
+}
+.ten{/*收藏送10元优惠券 文字大小设置*/
+	font-size: 10px;
+}
+/*为logo行设置样式end*/
+
+/*为导航条设置样式begin*/
+.all_tab{/*导航条位置*/
+	margin-top: 2px;
+	}
+.all_tab li{
+/*	background-color: #bfa;*/
+	float: left;
+	padding: 8px 20px;
+	font-size: 14px;
+	border-left: dashed 1px #5e64a1;
+}
+.all_tab li a{
+	display: block;
+}
+.all_tab li:hover{
+	background: url(../img/tab_bg.gif) white no-repeat bottom center;
+}
+.all_tab a:hover{
+	color:#2d3263
+}
+/*为导航条设置样式end*/
+
+/*为中间大框的选择设置样式begin*/
+.product_classify a{
+	display: block;
+}
+.top_product{
+	float: right;
+	background-color: #d8e6f2;
+	width: 477px;
+	height: 354px;
+}
+.classify{
+	background-color: yellow;
+	width: 477px;
+	height: 354px;
+}
+
+.classify_up{
+	background-color: red;
+	height: 177px;
+}
+.autumn_new{
+	width:212px;
+	padding: 39px 13px;
+	background-color: #e2ecf6;
+	text-align: center;
+}
+
+
+.product_new{
+	background-color: #f8f2ec;
+	width: 241px;
+	height: 177px;
+	float: right;
+	text-align: right;
+}
+.classify_down{
+	background-color: green;
+	height: 177px;
+}
+
+.small_wind{
+	height: 177px;
+	float: left;
+	background-color: #f7efe9;
+}
+.summer_heat{
+	width: 221px;
+	height: 99px;
+	padding: 39px 13px;
+	background-color: #e2ecf6;
+	float: right;
+	text-align: center;
+}
+/*为中间大框的选择设置样式end*/
+
+
+.hot_line{
+	padding: 27px 108px;
+	height: 127px;
+}
+.boom_item{
+	height: 33px;
+	border-top: solid #e69c77 4px;
+	background-color: #e5b198;
+}
+.boom_item span{
+	display: inline-block;
+	line-height: 33px;
+}
+.num_01{
+	font-size: 30px;
+	background-color: #e69c77;
+}
+.hot_letter{
+	color:#9d4e28;
+	font-size: 23px;
+}
+.big_alp{
+	font-size: 13px;
+	color:#aa694d;
+}
+.small_alp{
+	font-size: 9px;
+	color: #cf8f70;
+	float: right;
+}
+.read_more{
+	font-size: 11px;
+	color: #bf683d;
+	float: right;
+}
+.read_more img{
+	margin-left:4px;
+	margin-right:10px;
+}
+.big_img2{
+	float: right;
+	width: 478px;
+}
+.small_img1, .small_img2, .small_img3, .small_img4{
+	float: left;
+	margin-right: 2.2px;
+}
+.clothes_property{
+	background-color: #f2c9b4;
+	height: 26px;
+	line-height: 26px;
+	margin-top: -2px;
+	text-align: center;
+	width: 236px;
+}
+.name{
+	color: #cd977b;
+	width:133px;
+
+	border-right: solid #e1b59f 1px;
+}
+.price{
+	color: #e2af94;
+	float: right;
+	border-left: solid #f7dfd2 1px;
+	width: 100px;
+	font-size: 9px;
+}
+.price span{
+	color: #e49065;
+	font-size: 18px;
+}
+.price img{
+	float: left;
+	margin-top: 11px;
+}
+
+.end{
+	clear: both;
+	background-color: #1d2151;
+	height: 70px;
+
+}
+.logo_down{
+	float: left;
+}
+.logo_down img{
+	margin: 5px 10px;
+}
+
+.next_step{
+	float: right;
+	color: white;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	line-height: 70px;
+}
+.first-letter{
+	font-size: 50px;
+}
+.two_lines{
+	position: absolute;
+	right: 18px;
+	bottom: 10px;
+	font-size: 28px;
+}
+
+.next_step li{
+	position: relative;
+	padding:0 12px;
+	height: 70px;
+}
+

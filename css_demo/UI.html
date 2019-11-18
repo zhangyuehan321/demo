@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UI</title>
+</head>
+<style>
+    input[type="text"]:hover{background-color: green;}
+    input[type="text"]:focus{background-color: deeppink;}
+    input[type="text"]:active{background-color: yellow;}
+
+    input[type="checkbox"]:checked{outline: 2px solid red;}
+
+</style>
+<body>
+<!--<input type="text" name="name">-->
+<!--<input type="text" name="age">-->
+
+<!--<input type="checkbox" name="sing">唱歌-->
+<!--<input type="checkbox" name="dance">跳舞-->
+
+<input type="radio" id="radio1" name="enabled" onchange="radio_change()">可用
+<input type="radio" id="radio2" name="enabled" onchange="radio_change()">不可用
+<input type="text" id="text" disabled>
+<script>
+    function radio_change(){
+        var r1 = document.getElementById("radio1");
+        var r2 = document.getElementById("radio2");
+        var text = document.getElementById("text");
+        if (r1.checked){
+            text.disabled = "";
+        }else{
+            text.disabled = "disabled";
+        }
+    }
+</script>
+</body>
+</html>

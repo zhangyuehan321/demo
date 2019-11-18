@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <style>
+        .div1{
+            background-color: red;
+            width: 200px;
+            margin: 200px;
+        }
+        @-webkit-keyframes thiscolor {
+            0%{
+                background-color: red;
+                transform: scale(1);
+            }
+            30%{
+                background-color: yellow;
+                transform: scale(1.5);
+            }
+            50%{
+                background-color: green;
+                transform: scale(2);
+            }
+            70%{
+                background-color: blue;
+                transform: scale(1.5);
+            }
+            100%{
+                background-color: red;
+                transform: scale(1);
+            }
+        }
+        .div1:hover{
+            -webkit-animation: thiscolor 3s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">今天天气真棒啊！2019-11-7</div>
+</body>
+</html>

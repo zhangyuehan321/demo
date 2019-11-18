@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MarkDown</title>
+    <link rel="stylesheet" type="text/css" href="reset.css"/>
+    <link rel="stylesheet" type="text/css" href="mark_down.css"/>
+    <script src="iconfont.js"></script>
+    <script type="text/javascript" src="mark_down.js"></script>
+    <!--<script type="text/javascript" language="JavaScript" src="https://unpkg.com/marked"></script>-->
+</head>
+<body>
+<!--整个容器begin-->
+<div class="container">
+    <!--左侧列表区begin-->
+    <div class="function">
+        <div>
+            <button class="create_button current_back" onclick="createArticle()">+ Add note</button>
+        </div>
+        <ul id="article_list"></ul>
+    </div>
+    <!--左侧列表区end-->
+
+    <!--中间编辑区begin-->
+    <div class="edit">
+        <div class="title_button">
+            <input class="input_title" type="text" id="title">
+            <input class="current_back" type="button" value="预览" onclick="previewArticle()">
+            <input class="current_back" type="button" value="保存" onclick="saveArticle()">
+            <button class="button_style current_back" id="favorite_button" onclick="favoriteArticle()"></button>
+            <button class="button_style current_back" onclick="deleteArticle()">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-ashbin-fill"></use>
+                </svg>
+            </button>
+
+        </div>
+
+        <div class="user_input">
+            <textarea id="content"></textarea>
+        </div>
+    </div>
+    <!--中间编辑区end-->
+
+    <!--右侧预览区begin-->
+    <div id="preview"></div>
+    <!--右侧预览区end-->
+</div>
+<!--整个容器end-->
+<!--const html = marked('**Bold** *Italic* [link] (http://vuejs.org/)')-->
+<!--console.log(html);-->
+</body>
+</html>

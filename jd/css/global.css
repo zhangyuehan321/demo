@@ -1,0 +1,74 @@
+/*这个文件用来保存网站相同的头部和尾部的css*/
+
+/*快捷导航shortcut开始*/
+.shortcut{
+	background-color: #bfa;
+	height: 30px;
+	line-height: 30px;
+	background-color: #e3e4e5;
+	border-bottom: 1px solid #dddddd;
+	color: #999;
+}
+.shortcut li{
+	float: left;
+	padding: 0 12px;
+}
+.shortcut .line{
+	height: 10px;
+	width: 1px;
+	background-color: #ccc;
+	padding: 0;
+	margin-top: 9px;
+}
+.dorpdown i{
+	font: "微软雅黑";
+}
+.color_red{
+	color: #e1251b;
+}
+/*快捷导航shortcut结束*/
+
+/*首部搜索框header开始*/
+.w{
+	position: relative;
+	height: 140px;
+}
+.jd_logo{
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 190px;
+	height: 120px;
+	background-color: #bfa;
+}
+
+.search{
+	background-color: blue;
+	height: 60px;
+}
+.hotwords{
+	position: absolute;
+	left: 260px;
+	top: 65px;
+	width: 550px;
+	height: 20px;
+	background-color: purple;
+}
+.navitems{
+	position: absolute;
+	left: 203px;
+	bottom: 0;
+	height: 40px;
+	width: 768px;
+	background-color: greenyellow;
+}
+
+.brand_logo{
+	position: absolute;
+	right: 0;
+	top: 10px;
+	width: 190px;
+	height: 120px;
+	background-color: pink;
+}
+/*首部搜索框header结束*/

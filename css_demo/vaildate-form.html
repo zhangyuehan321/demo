@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>validate</title>
+</head>
+<body>
+<div class="container">
+
+    <div class="test-from">
+
+        <div class="input-area">
+            <label>用户名</label>
+            <input type="text" name="username" value="" onblur="validateName(this)" onfocus="clearMsg(this)">
+            <span></span>
+        </div>
+
+        <div class="input-area">
+            <label>密码</label>
+            <input type="password" name="password" value="" onblur="validatePassword(this)" onfocus="clearMsg(this)">
+            <span></span>
+        </div>
+
+        <div class="input-area">
+            <label>密码确认</label>
+            <input type="password" name="passwordConfirm" value="" onblur="validatePasswordConfirm(this)" onfocus="clearMsg(this)">
+            <span></span>
+        </div>
+
+        <div>
+            <button type="submit"> 提交</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+<script type="text/javascript">
+
+    // 提示消息字典，暂时无用
+    var validateDict = {
+        'userNameBlank': '用户名不能为空',
+        'passwordBlank': '密码不能为空',
+        'passwordConfirm': '确认密码与密码不一致',
+    };
+
+
+
+    function validateName(el) {
+        // 如果不满足验证规则，给予提示
+        if(el.value == "" || el.value == undefined){
+            el.parentElement.lastElementChild.innerHTML  = "用户名不能为空";
+        }
+    };
+
+    // 密码最少6位
+    function validatePassword(el) {
+        // 如果不满足验证规则，给予提示
+        if(el.value == "" || el.value == undefined){
+            el.parentElement.lastElementChild.innerHTML  = "密码不能为空";
+        }
+    };
+
+    // 密码最少6位且与密码相同
+    function validatePasswordConfirm() {
+    };
+
+    // 可以将上边三个方法整合成一个方法，减少相同的代码
+
+    // 获得焦点时置空错误信息
+    function clearMsg(el) {
+        // 获取元素后边的span元素
+        el.parentElement.lastElementChild.innerHTML = "";
+    };
+
+    // js 操作localStorage
+    var key = "a";
+    var value = 1;
+    // 数组 哈希应该转化成JSON后存入，取出后再用JSON解析成数组 哈希
+    window.localStorage.getItem(key);
+    window.localStorage.setItem(key, value);
+    window.localStorage.removeItem(key);
+
+
+
+</script>
+</html>

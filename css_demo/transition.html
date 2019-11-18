@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition</title>
+    <style>
+        div{
+            margin-top: 200px;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            /*在这里调用*/
+            transition: width 1s linear, background-color 1s linear, transform 1s linear;
+        }
+        /*变化后的属性设置*/
+        div:hover{
+            width: 400px;
+            background-color: green;
+            transform: rotate(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div>实例文字</div>
+</body>
+</html>

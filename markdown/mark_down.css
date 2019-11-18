@@ -1,0 +1,83 @@
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+/*整个容器begin*/
+.container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: pink;
+}
+/*整个容器end*/
+
+/*左侧列表区begin*/
+.function{
+    /*flex-grow: 1;*/
+    width: 20%;
+}
+.current_back{
+    border-radius: 0.15em;
+    border: none;
+    background-color: deeppink;
+    color: white;
+}
+.create_button{
+    height: 10%;
+    padding: 8px 12px;
+    margin: 3px;
+    font-size: 20px;
+}
+.article_item{
+    height: 10%;
+    padding: 10px;
+    font-size: 16px;
+}
+.fl{
+    float: right;
+}
+.article_item:hover{
+    background-color: deeppink;
+    color: white;
+}
+.article_item_selected{
+    height: 10%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: deeppink;
+    color: white;
+}
+/*左侧列表区ene*/
+
+/*中间编辑区begin*/
+.edit{
+    /*flex-grow: 2;*/
+    width: 40%;
+    margin-right: 2px;
+    background-color: white;
+}
+.title_button{
+    margin: 3px;
+    height: 4%;
+}
+.input_title{
+    width: 50%;
+}
+#content{
+    height: 620px;
+    width: 608px;
+    border: none;
+}
+/*中间编辑区end*/
+
+/*右侧预览区begin*/
+#preview{
+    /*flex-grow: 2;*/
+    width: 40%;
+    background-color: white;
+}
+/*右侧预览区end*/

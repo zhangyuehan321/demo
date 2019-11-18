@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*li:first-child{*/
+            /*background-color: red;*/
+        /*}*/
+        /*li:last-child{*/
+            /*background-color: green;*/
+        /*}*/
+        /*li:nth-child(3){*/
+            /*background-color: gold;*/
+        /*}*/
+        /*li:nth-last-child(2){*/
+            /*background-color: blue;*/
+        /*}*/
+        li:nth-child(even){
+            background-color: red;
+        }
+        li:nth-last-child(odd){
+            background-color: yellow;
+        }
+        li:only-child{background-color: green}
+    </style>
+</head>
+<body>
+<ul>
+    <li>This is 1</li>
+    <li>This is 2</li>
+    <li>This is 3</li>
+    <li>This is 4</li>
+    <li>This is 5</li>
+    <li>This is 6</li>
+</ul>
+<ul>
+    <li>This is 1</li>
+</ul>
+</body>
+</html>
