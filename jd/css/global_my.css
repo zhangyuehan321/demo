@@ -1,5 +1,11 @@
 /*这个文件用来保存网站相同的头部和尾部的css*/
-
+.icon {
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
 /*快捷导航shortcut开始*/
 .shortcut{
 	height: 30px;
@@ -44,7 +50,7 @@
 }
 .search{
 	height: 140px;
-	width: 810px;	
+	width: 810px;
 }
 .quick_search{
 	width: 740px;
@@ -72,7 +78,7 @@
 	width: 56px;
 	border:0;
 	padding: 0;
-	height: 36px;	
+	height: 36px;
 	background-color: #e2231a;
 	color: white;
 }
@@ -112,12 +118,11 @@
 
 /*产品分类及轮播部分fs开始*/
 .fllb{ /*分类轮播*/
-	background-color: #f3f3f3;	
+	background-color: #f3f3f3;
 }
 .fs{
 	padding-top: 10px;
 	height: 470px;
-/*	background-color: #BBFFAA;*/
 }
 .fs_col1{
 	width: 190px;
@@ -163,7 +168,7 @@
 	background:rgba(0,0,0,.3);
 	position: absolute;
 	top:50%;
-	margin-top: -17px;	
+	margin-top: -17px;
 	color: white;
 	font-family: simsun;
 	line-height: 35px;
@@ -318,7 +323,7 @@
 	background-color: #f4f4f4;
 }
 .slogan{
-	height: 102px; 
+	height: 102px;
 	border-bottom: 1px solid #dedede;
 }
 .slogan ul{
@@ -349,20 +354,16 @@
 	height: 42px;
 }
 .jd_duo{
-	background: url(../img/footer.png) no-repeat;
-	background-position: 0 -192px;
+	background: url(../img/footer.png) no-repeat 0 -192px;
 }
 .jd_kuai{
-	background: url(../img/footer.png) no-repeat;
-	background-position: -40px -192px;
+	background: url(../img/footer.png) no-repeat  -40px -192px;
 }
 .jd_hao{
-	background: url(../img/footer.png) no-repeat;
-	background-position: -80px -192px;
+	background: url(../img/footer.png) no-repeat -80px -192px;
 }
 .jd_sheng{
-	background: url(../img/footer.png) no-repeat;
-	background-position: -120px -192px;
+	background: url(../img/footer.png) no-repeat -120px -192px;
 }
 .help{
 	height: 160px;
@@ -381,7 +382,7 @@
 	float: right;
 	width: 200px;
 	height: 150px;
-	background: url(../img/footer.png) no-repeat;	
+	background: url(../img/footer.png) no-repeat;
 }
 .help_cover_title{
 	font-size: 14px;
@@ -396,11 +397,65 @@
 }
 .copyright{
 	height: 220px;
-	background-color: #ddd;
+	border-top: 1px solid #e1e1e1;
+	width: 1190px;
+	margin: 0 auto;
 }
 .copyright_links{
-	height: 50px;
-	padding: 19px 53px;
-	background-color: #BBFFAA;
+	height: 16px;
+	padding: 17px 40px;
+}
+.copyright_split{
+	padding: 0 8px;
+}
+.copyright_info{
+	height: 110px;
+	text-align: center;
+}
+.copyright_info_img_num{
+	display: inline-block;
+	width: 15px;
+	height: 12px;
+	margin-right: 8px;
+}
+.img_1{
+	background: url(../img/footer.png) no-repeat -108px -155px;
+}
+.img_2{
+	background: url(../img/footer.png) no-repeat -128px -155px;
+}
+.img_3{
+	background: url(../img/footer.png) no-repeat -148px -155px;
+}
+.img_4{
+	background: url(../img/footer.png) no-repeat -168px -155px;
+}
+.img_5{
+	background: url(../img/footer.png) no-repeat -108px -172px;
+}
+.copyright_auth{
+	text-align: center;
+	margin-top: 30px;
+}
+.copyright_auth_num{
+	display: inline-block;
+	width: 103px;
+	height: 32px;
+	margin: 0 3px;
+}
+.num_1{
+	background: url(../img/footer.png) no-repeat -206px -112px;
+}
+.num_2{
+	background: url(../img/footer.png) no-repeat -206px -74px;
+}
+.num_3{
+	background: url(../img/footer.png) no-repeat -206px -36px;
+}
+.num_4{
+	background: url(../img/footer.png) no-repeat -206px 0;
+}
+.num_5{
+	background: url(../img/footer.png) no-repeat 0 -155px;
 }
 /*网页底部footer结束*/
