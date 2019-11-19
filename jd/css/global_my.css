@@ -6,6 +6,9 @@
 	fill: currentColor;
 	overflow: hidden;
 }
+.large{
+	font-size: 20px;
+}
 /*快捷导航shortcut开始*/
 .shortcut{
 	height: 30px;
@@ -13,7 +16,7 @@
 	background-color: #e3e4e5;
 	border-bottom: 1px solid #dddddd;
 }
-.shortcut, .hotwords a{
+.hotwords a, .shortcut a{
 	color: #999;
 }
 .shortcut li{
@@ -30,7 +33,7 @@
 .dorpdown i{
 	font: "微软雅黑";
 }
-.shortcut, .hotwords .color_red{
+.hotwords .color_red, .shortcut .color_red, .navitems .color_red{
 	color: #e1251b;
 }
 /*快捷导航shortcut结束*/
@@ -62,16 +65,21 @@
 }
 .search_input{
 	width: 546px;
-/*	height: 32px;*/
-/*	border: 2px solid #e2231a;*/
-	background-color: #BBFFAA;
+}
+.photo_search{
+	position: absolute;
+	right: 620px;
+	top:33px;
 }
 .search_input input{
+	position: relative;
 	height: 32px;
 	width: 488px;
 	border: 2px solid #e2231a;
 	border-right: 0;
 	padding: 0;
+	color: #989898;
+	font-size: 12px;
 }
 .search_input button{
 	float: right;
@@ -87,6 +95,7 @@
 	height: 34px;
 	width: 130px;
 	border: 1px solid #eee;
+	text-align: center;
 }
 .shop_car a{
 	color: #e1251b;
@@ -100,13 +109,11 @@
 	height: 11px;
 	padding: 9px 9px 13px 0;
 }
-.hotwords a{
-	/*color: #999;*/
-}
 .navitems li{
 	float: left;
 	height: 13px;
 	padding: 20px 0 12px 22px;
+	font-size: 15px;
 }
 .brand_logo{
 	width: 190px;
@@ -396,7 +403,7 @@
 	text-align: right;
 }
 .copyright{
-	height: 220px;
+	height: 190px;
 	border-top: 1px solid #e1e1e1;
 	width: 1190px;
 	margin: 0 auto;
@@ -411,6 +418,12 @@
 .copyright_info{
 	height: 110px;
 	text-align: center;
+}
+.copyright_info a, .copyright_info span, .copyright_split{
+	color: #999;
+}
+.copyright_info p{
+	margin:3px 0;
 }
 .copyright_info_img_num{
 	display: inline-block;
