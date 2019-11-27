@@ -12,7 +12,6 @@ window.onload = function () {
     loadData();
     selectArticle(this.articles[0].id)
 };
-https://github.com/zhangyuehan321/markdown.git
 
 // 根据文章数组重新渲染页面
 function loadData() {

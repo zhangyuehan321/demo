@@ -9,8 +9,11 @@
     <link rel="stylesheet" type="text/css" href="reset.css"/>
     <link rel="stylesheet" type="text/css" href="mark_down.css"/>
     <script src="iconfont.js"></script>
-    <script type="text/javascript" src="mark_down.js"></script>
-    <!--<script type="text/javascript" language="JavaScript" src="https://unpkg.com/marked"></script>-->
+    <script rel="javascript" type="text/javascript" src="jquery.min.js"></script>
+    <!--用Ajax调用-->
+    <script rel="javascript" type="text/javascript" src="abc.js"></script>
+    <!--用本地的数组-->
+    <!--<script type="text/javascript" src="mark_down.js"></script>-->
 </head>
 <body>
 <!--整个容器begin-->
@@ -20,7 +23,9 @@
         <div>
             <button class="create_button current_back" onclick="createArticle()">+ Add note</button>
         </div>
-        <ul id="article_list"></ul>
+        <ul id="article_list">
+
+        </ul>
     </div>
     <!--左侧列表区end-->
 
@@ -46,7 +51,13 @@
     <!--中间编辑区end-->
 
     <!--右侧预览区begin-->
-    <div id="preview"></div>
+    <div id="preview">
+
+        <!--<div id="login">-->
+            <!--<label for="username">username</label>-->
+        <!--</div>-->
+    </div>
+
     <!--右侧预览区end-->
 </div>
 <!--整个容器end-->
