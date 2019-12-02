@@ -1,15 +1,6 @@
 
 var articles = [];
 //所有接口的content-type都是form-data的,不是json的
-// var articles = [
-//     {
-//         id: 1,
-//         title: "New note",
-//         content: "test",
-//         user_id: 0,
-//         star_status: 0,
-//     }
-// ];
 var url = "http://107.150.124.179:8081/api/v1/articles/"
 var token = "";
 
@@ -17,7 +8,7 @@ window.onload = function () {
     getToken();
     console.log('token'+ this.token);
     loadData();
-    //selectArticle(this.articles[0].id) 确定是要传id吗？
+    selectArticle(this.articles[0].id);
 };
 
 // 根据文章数组重新渲染页面
@@ -36,7 +27,6 @@ function loadData() {
             var article_list = document.getElementById("article_list");
             $(str).each(function(index, element){
                 //var string = JSON.stringify(element);
-                //debugger
                 // "{"title":"111","content":"111","user_id":0,"star_status":0,"id":1}"
                 li += `<li class="article_item" id="${element.id}" onclick='selectArticle("${element.id}")'>${element.title}</li>`;
                // "<input type='button' name='delete' value='delete' id='btn"+i+"' οnclick='removeElement(\""+id+"\")'/>"
@@ -82,7 +72,7 @@ function loadData() {
 function createArticle() {
     const newItemId = String(Date.now());
     const article = {
-        id: newItemId,
+       // id: newItemId,
         title: "New note" + (this.articles.length + 1),  //文章名
         content: newItemId + "Hello",  //文章内容
         created: Date.now(),
@@ -94,27 +84,30 @@ function createArticle() {
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded;charset=utf-8',
         data: transformArticleToOrigin(article),
+
         beforeSend: function(request) {
             request.setRequestHeader("token", token);  //添加  token验证
         },
         success: function (data) {
-            console.log('bingo',data);
+            articles = data;
+            console.log('create_bingo',data);
+            loadData();
+            selectArticle(data.data.id);
         },
         error:function (XMLHttpRequest, textStatus, errorThrown) {
             alert(typeof(errorThrown));
         }
     })
-    loadData();
-    selectArticle(newItemId);
+
+
 };
 
 // 选中某个文章
 function selectArticle(id) {
-    //debugger
-    //console.log("selectArticle: " + id);
+    console.log("selectArticle: " + id);
     // 根据ID从文章数值中查找到文章
     // 左侧列表选中，更新右侧文本和是否收藏
-    let article = getObjById(id, this.articles);
+    let article = getObjById(id, articles);
     document.getElementById("title").value = article.title;
     document.getElementById("content").value = article.content;
     // setFavoriteArticleStyle(article);
@@ -207,21 +200,12 @@ function saveArticle() {
     }
     var title = document.getElementById("title").value;
     var content = document.getElementById("content").value;
-    //debugger
     var update_data = {
         id: Number(getSelectArticleId()),
         title: title,
         content: content,
        // favorite: false,
     }
-//debugger
-//     for (let i = 0; i < this.articles.length; i++){
-//         if (articles[i].id == getSelectArticleId()){
-//             articles[i].title = document.getElementById("title").value;
-//             articles[i].content = document.getElementById("content").value;
-//         }
-//     }
-    //debugger
     $.ajax({
         type: "PATCH",
         url: url,
@@ -238,6 +222,7 @@ function saveArticle() {
         }
     })
     loadData();
+    selectArticle(update_data.id);
 };
 
 //删除事件
@@ -246,35 +231,37 @@ function deleteArticle() {
     var delete_data = {
         id: parseInt(getSelectArticleId())
     }
-    $.ajax({
-        type: "DELETE",
-        url: url + parseInt(getSelectArticleId()),
-        beforeSend: function(request) {
-            request.setRequestHeader("token", token);  //添加  token验证
-        },
-        data: transformArticleToOrigin(delete_data),
-        async: false, //改成同步，这样onload时就会先获取token再进入loadData()方法
-        success: function(str){
-            console.log('delete_bingo',str);
-            loadData();
-        },
-        error: function (data) {
-            console.log('ajax error handling',data);
+    //(let i of articles) i是articles数组中的每一个对象
+    //(let i in articles) i是articles数组中的每一个对象的下标
+    for(let i in articles){
+        if(articles[i].id == getSelectArticleId()){
+            var del = confirm(`确定要删除名为${articles[i].title}的文章吗？`);
+            if (del == true){
+                $.ajax({
+                    type: "DELETE",
+                    url: url + parseInt(getSelectArticleId()),
+                    beforeSend: function(request) {
+                        request.setRequestHeader("token", token);  //添加  token验证
+                    },
+                    data: transformArticleToOrigin(delete_data),
+                    async: false, //改成同步，这样onload时就会先获取token再进入loadData()方法
+                    success: function(str){
+                        console.log('delete_bingo',str);
+                        loadData();
+
+                        //删除之后自动选中被删的前一个article
+                        if (i>0){
+                            selectArticle((articles[i-1]).id);
+                        }
+                    },
+                    error: function (data) {
+                        console.log('ajax error handling',data);
+                    }
+                })
+            }
+            break;
         }
-    })
-    // for (let i = 0; i < this.articles.length; i++){
-    //     if (articles[i].id == getSelectArticleId()){
-    //         var del = confirm(`确定要删除名为${articles[i].title}的文章吗？`);
-    //         if (del == true){
-    //             articles.splice(i, 1);
-    //         }
-    //         loadData();
-    //         //删除之后被删的文章名和信息还在，所以有如下代码
-    //         if (i>0){
-    //             selectArticle(articles[i-1].id)
-    //         }
-    //     }
-    // }
+    }
 };
 
 
@@ -307,3 +294,7 @@ function previewArticle() {
 //   已解决，更新的type写错了，应该是“PATCH”
 // 3.删除到底哪里错了，还是id吗？
 //   已解决，是url写错了，url写之前应该try一下，看看真正返回的是什么。本例中是url+id,id并没有大括号包围
+//1129 Question:
+//1.选择后删除时，遍历到选中的i时，i显示undefind,articles[i].id报错。可是（articles[i].id == getSelectArticleId()）后，id又正常，然后进入了if判断。可以正常删除，可是删除后不会选中前一个li
+//2.新建后存到接口的id是默认的，不是我自己设置的时间字符串，可以新建成功，但是不能自动选中新建的li
+//  解决方法：1.删除自己新建的id，不可行
