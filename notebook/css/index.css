@@ -1,0 +1,177 @@
+/*定义笔记本主页的样式*/
+
+/*定义根页面的样式*/
+.container{
+    display: flex;
+    align-items: flex-start;
+    /*以下代码使flex元素垂直满屏显示*/
+    position: absolute;
+    bottom: 0;
+    top:0;
+    left:0;
+    right:0;
+}
+
+/*左侧功能区样式begin*/
+.sidebar{
+    flex: none;
+    box-sizing: border-box;
+    width: 72px;
+    height: 100%;
+    padding: 18px;
+    border-right:1px solid #ececec;
+    background-color: #f8f8f8;
+}
+.logo{
+    padding-bottom: 18px;
+}
+.logo_image{
+    width: 36px;
+    height: 36px;
+    background: url("../img/logo.png") no-repeat;
+}
+    /*左下角的账户样式*/
+.account{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 18px;
+    border-top:1px solid #ececec
+}
+.account_image{
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background: url("../img/head.png");
+}
+
+.note_operation{
+    padding: 9px 0;
+}
+[class^=note_operation_image]{
+    padding: 3px 0;
+}
+.note_operation_image_before{
+    animation: imgFadeFromLeft .5s ;
+}
+.note_operation_image_after{
+    animation: imgFadeFromRight .5s ;
+}
+@keyframes imgFadeFromLeft {
+    from{
+        opacity: 0;
+    }to{
+         opacity:1;
+     }
+}
+@keyframes imgFadeFromRight {
+    from{
+        opacity: 0;
+    }to{
+         opacity:1;
+     }
+}
+.logo_classify{
+    padding: 45px 0;
+}
+[class^=logo_classify_image]{
+    padding: 3px 0;
+}
+.operation_add{
+    position: relative;
+}
+.title_position{
+    position: absolute;
+    left: 38px;
+    top:11px;
+    display: flex;
+}
+.angle{
+    flex: none;
+    width: 4px;
+    height: 8px;
+    align-self: center;
+    background: url("../img/angle.png");
+}
+.display_title{
+    flex: auto;
+    font-size: 12px;
+    white-space: nowrap;
+    background-color: #606060;
+    padding: 4px 7px;
+    border-radius: 3px;
+}
+/*左侧功能区样式end*/
+
+/*右侧展示区样式begin*/
+.stage{
+    /*flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。*/
+    /*该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)*/
+    flex:auto;
+    height: 100%;
+    background-color: #ffffff;
+}
+/*顶层工具栏begin*/
+.container_top_toolbar{
+    display: flex;
+    height: 52px;
+}
+/*笔记列表上方的工具栏，顶部左侧工具栏begin*/
+.toolbar_on_list{
+    flex:none;
+    padding: 24px 25px 0 24px;
+    width: 350px;
+    box-sizing: border-box;
+    border-right: 1px solid #ececec;
+}
+.note_text{
+    font-size: 21px;
+    color: #878787;
+    font-family: gotham, helvetica, arial, sans-serif;
+    font-weight: 300;
+}
+.webpage_cut_button{
+    float: right;
+    box-sizing: border-box;
+    width: 87px;
+    height: 29px;
+    border: none;
+    border-radius: 2px;
+    background-color: #2dbe60;
+}
+.webpage_cut{
+    font-size: 10px;
+}
+/*笔记列表上方的工具栏，顶部左侧工具栏end*/
+/*笔记编写上方的工具栏，顶部右侧工具栏begin*/
+.toolbar_on_note{
+    flex: auto;
+    padding: 12px 0;
+}
+.toolbar_detail_1{
+    float: left;
+    height: 100%;
+    padding-left: 18px;
+}
+.toolbar_detail_image{
+    float: left;
+    width: 24px;
+    height: 24px;
+    padding-right: 15px;
+}
+.toolbar_detail_2{
+    float: right;
+    width: 188px;
+    height: 100%;
+    background-color: #bbffaa;
+}
+/*笔记编写上方的工具栏，顶部右侧工具栏end*/
+/*顶层工具栏end*/
+
+/*主体内容begin*/
+.main_body{
+    background-color: #329d90;
+    height: calc(100% - 52px);
+}
+/*主体内容end*/
+/*右侧展示区样式end*/

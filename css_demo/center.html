@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Center Div</title>
+</head>
+<style>
+    .father{
+        width: 600px;
+        height: 500px;
+        background-color: aquamarine;
+        position: relative;
+    }
+    /*水平居中*/
+    /*.abc{*/
+        /*margin: 0 auto;*/
+    /*}*/
+
+    /*水平垂直居中一： 定位*/
+    /*.son{*/
+        /*position: absolute;*/
+        /*width: 300px;*/
+        /*height: 200px;*/
+        /*!*top: 250px;!*父高的一半*!*!*/
+        /*!*left: 300px;!*父宽的一半*!*!*/
+        /*top: 50%;*/
+        /*left: 50%;*/
+        /*!*margin: -100px 0 0 -150px;!*上：自身高的一半；左：自身宽的一半*!*!*/
+        /*transform: translate(-50%, -50%);*/
+        /*background-color: red;*/
+    /*}*/
+    /*水平垂直居中二： transform （未知宽高）*/
+    /*.son{*/
+        /*position: absolute;*/
+        /*width: 300px;*/
+        /*height: 200px;*/
+        /*top: 50%;*/
+        /*left: 50%;*/
+        /*transform: translate(-50%, -50%);*/
+        /*background-color: red;*/
+    /*}*/
+    /*水平垂直居中三： flex （考虑兼容性问题）*/
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+    }
+    .container div{
+        width: 100px;
+        height: 100px;
+        background-color: green;
+    }
+</style>
+<body>
+<div class="container">
+    <div></div>
+</div>
+    <!--<div class="son">asadfasadf</div>-->
+</body>
+</html>

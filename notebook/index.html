@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notebook</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <!--顶层容器，根部begin-->
+    <div id="container" class="container">
+        <!--左侧主要工具栏begin-->
+        <aside id="sidebar" class="sidebar">
+            <div class="logo">
+                <div class="logo_image" ></div>
+            </div>
+            <div class="note_operation">
+                <div class="operation_add">
+                    <img class="note_operation_image_add" src="img/add_before.png" data-src="img/add_after.png">
+                    <div class="title_position">
+                        <div class="angle"></div>
+                        <span class="display_title">新建笔记</span>
+                    </div>
+                </div>
+                <div class="operation_add">
+                    <img class="note_operation_image_search" src="img/search_before.png" data-src="img/search_after.png">
+                    <div class="title_position">
+                        <div class="angle"></div>
+                        <span class="display_title">搜索</span>
+                    </div>
+                </div>
+                <div class="operation_add">
+                    <img class="note_operation_image_work" src="img/work_before.png" data-src="img/work_after.png">
+                    <div class="title_position">
+                        <div class="angle"></div>
+                        <span class="display_title">工作群聊</span>
+                    </div>
+                </div>
+                <!--<img class="note_operation_image_add" src="img/add_before.png" data-src="img/add_after.png">-->
+                <!--<img class="note_operation_image_search" src="img/search_before.png" data-src="img/search_after.png">-->
+                <!--<img class="note_operation_image_work" src="img/work_before.png" data-src="img/work_after.png">-->
+            </div>
+            <div class="logo_classify">
+                <img class="logo_classify_image_star" src="img/star_before.png" data-src="img/star_after.png">
+                <img class="logo_classify_image_note" src="img/note_before.png" data-src="img/note_after.png">
+                <img class="logo_classify_image_notebook" src="img/notebook_before.png" data-src="img/notebook_after.png">
+                <img class="logo_classify_image_label" src="img/label_before.png" data-src="img/label_after.png">
+            </div>
+            <div class="account">
+                <div class="account_image"></div>
+            </div>
+        </aside>
+        <!--左侧主要工具栏end-->
+        <!--右侧文章相关展示begin-->
+        <div id="stage" class="stage">
+            <!--顶层工具栏begin-->
+            <div class="container_top_toolbar">
+                <!--笔记列表上方的工具栏，顶部左侧工具栏begin-->
+                <div class="toolbar_on_list">
+                    <span class="note_text">笔记</span>
+                    <button class="webpage_cut_button">
+                        <img src="" alt="">
+                        <span class="webpage_cut">网页剪藏</span>
+                    </button>
+                </div>
+                <!--笔记列表上方的工具栏，顶部左侧工具栏end-->
+                <!--笔记编写上方的工具栏，顶部右侧工具栏begin-->
+                <div class="toolbar_on_note">
+                    <div class="toolbar_detail_1">
+                        <ul>
+                            <li class="toolbar_detail_image"><img src="img/remind_before.png" alt=""></li>
+                            <li class="toolbar_detail_image"><img src="img/shortcut_before.png" alt=""></li>
+                            <li class="toolbar_detail_image"><img src="img/note_message_before.png" alt=""></li>
+                            <li class="toolbar_detail_image"><img src="img/delete_before.png" alt=""></li>
+                            <li class="toolbar_detail_image"><img src="img/more_before.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="toolbar_detail_2">
+                        <ul>
+                            <li class="toolbar_detail_button"></li>
+                            <li class="toolbar_detail_button"></li>
+                            <li class="toolbar_detail_button"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--笔记编写上方的工具栏，顶部右侧工具栏end-->
+            </div>
+            <!--顶层工具栏end-->
+            <!--主体内容begin-->
+            <div class="main_body">mainbody</div>
+            <!--主体内容end-->
+        </div>
+        <!--右侧文章相关展示end-->
+    </div>
+    <!--顶层容器，根部end-->
+</body>
+</html>
