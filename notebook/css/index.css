@@ -161,17 +161,108 @@
 }
 .toolbar_detail_2{
     float: right;
-    width: 188px;
     height: 100%;
-    background-color: #bbffaa;
+    margin-right: 16px;
+}
+.toolbar_detail_button{
+    float: left;
+}
+.upgrade{
+    width: 64px;
+    height: 28px;
+    border: none;
+    border-radius: 0.3em;
+    background-color: #ffad17;
+    color: #ffffff;
+}
+.share{
+    width: 80px;
+    height: 28px;
+    margin: 0 10px;
+    border: 1px solid #c4c4c4;
+    border-radius: 0.3em;
+    background-color: #ffffff;
+    color: #606060;
+}
+.extend{
+    width: 30px;
+    height: 28px;
+    border: 1px solid #2dbe60;
+    border-radius: 0.3em;
+    background: url("../img/extend.png") no-repeat center center;
 }
 /*笔记编写上方的工具栏，顶部右侧工具栏end*/
 /*顶层工具栏end*/
 
 /*主体内容begin*/
 .main_body{
-    background-color: #329d90;
+    display: flex;
     height: calc(100% - 52px);
+}
+.main_body_1{
+    flex: none;
+    width: 350px;
+    border-right: 1px solid #ececec;
+}
+.main_body_1_message{
+    box-sizing: border-box;
+    height: 46px;
+    padding: 23px 25px 11px 25px;
+    color: #ababab;
+    font-size: 12px;
+}
+.message_option{
+    float: right;
+    color: #ababab;
+}
+.message_option_image{
+    margin: 2px 0 0 4px;
+}
+.main_body_1_list{
+    height: calc(100% - 46px);
+    background-color: #bbffaa;
+}
+.main_body_2{
+    flex: auto;
+    /*background-color: #8c0000;*/
+}
+.main_body_2_message{
+    height: 20px;
+    margin: 7px 76px 27px 76px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+    font-size: 12px;
+}
+.message_note{
+    display: inline-block;
+}
+.note_icon{
+    display: inline-block;
+    width: 12px;
+    height: 13px;
+    margin-top: 7px;
+    background: url("../img/note_icon.png");
+}
+.first-note{
+    display: inline-block;
+    padding: 0 8px;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #606060;
+}
+.new_label{
+    display: inline-block;
+    width: 12px;
+    height: 13px;
+    background: url("../img/new_label.png") no-repeat bottom left;
+}
+.message_label{
+    color: #c4c4c4;
+}
+.main_body_2_detail{
+    height: calc(100% - 64px);
+    background-color:#5e64a1;
 }
 /*主体内容end*/
 /*右侧展示区样式end*/
