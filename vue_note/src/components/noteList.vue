@@ -7,7 +7,7 @@
     <div class="main_body_1_list">
       <ul>
         <li class="article_list_li"
-            v-for="(article, index) in lists"
+            v-for="(article, index) in list"
             v-bind:key="index"
             @click="switchActiveLink(article)">
           <!--:class="{'larticle_list_li_active': item.id == activeLinkId,'article_list_li_hover':index==hoverIndex}"-->
@@ -22,25 +22,19 @@
 </template>
 
 <script>
-// import store from '../vuex/store.js'
 export default {
-  // inject: ['reload'],
   name: 'noteList.vue',
   data () {
     return {
-      currentArticle: {}
-      // hoverIndex: -1, // 菜单hover索引
-      // activeLinkId: 0 // 当前激活的菜单id
+      currentArticle: {},
+      list: this.$articleList
     }
   },
-  // mounted () {
-  //   this.reload()
+  // props: {
+  //   lists: {
+  //     type: Array
+  //   }
   // },
-  props: {
-    lists: {
-      type: Array
-    }
-  },
   methods: {
     switchActiveLink: function (article) {
       // 获取点击对象

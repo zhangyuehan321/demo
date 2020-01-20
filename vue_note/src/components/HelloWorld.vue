@@ -6,13 +6,13 @@
         </div>
         <div class="form">
             <div class="user_input">
-                <input class="input" type="text" v-model="username" placeholder="用户名">
-                <input class="input" type="password" v-model="password" placeholder="密码">
+                <input class="input" type="text" placeholder="用户名">
+                <input class="input" type="password" placeholder="密码">
             </div>
             <div class="remember">
                 <input class="checkbox" type="checkbox"><span class="remember_text">30天内记住我</span>
             </div>
-            <div class="login_button"  v-on:click="userLogin"><a href="#">登录</a></div>
+            <div class="login_button"><a href="#">登录</a></div>
         </div>
         <ul class="account1">
             <li class="no_account">没有账号？</li>
@@ -22,37 +22,11 @@
 </template>
 
 <script>
-import store from '../vuex/store.js'
 export default {
-  name: 'login.vue',
+  name: 'HelloWorld',
   data () {
     return {
-      username: '',
-      password: ''
-    }
-  },
-  store,
-  methods: {
-    userLogin () {
-      let _this = this
-      _this.$axios({
-        method: 'post',
-        url: 'http://107.150.124.179:8081/api/v1/users/login',
-        data: _this.qs.stringify({ // 这里是发送给后台的数据
-          userName: _this.username,
-          password: _this.password
-        })
-      }).then((response) => { // 这里使用了ES6的语法
-        if (response.status === 200) {
-          console.log('OK请求成功返回的数据:' + JSON.stringify(response)) // 请求成功返回的数据
-          // _this.$store.commit('SET_TOKEN', response.data.data.token)
-          // _this.$store.commit('GET_USER', response.data.data.userName) 这两行的目的是为了将token和username存到状态管理中，以便各组件调用，可是现在username的值取不到
-          window.localStorage.setItem('token', response.data.data.token)
-          _this.$router.push({path: '/index'})
-        }
-      }).catch((error) => {
-        console.log('No请求失败返回的数据:' + error) // 请求失败返回的数据
-      })
+      msg: 'Welcome to Your Vue.js App'
     }
   }
 }

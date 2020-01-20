@@ -48,11 +48,11 @@ export default {
   data () {
     return {}
   },
-  props: {
-    lists: {
-      type: Array
-    }
-  },
+  // props: {
+  //   lists: {
+  //     type: Array
+  //   }
+  // },
   methods: {
     creatArticle: function () {
       // let data = {'title': `Article${this.lists.length}`, 'content': String(Date.now()), starStatus: 0}
@@ -62,7 +62,7 @@ export default {
       // data.append('starStatus', '0')
 
       // can't reload the lists
-      let data = {'title': '5', 'content': '5', 'starStatus': '1'}
+      let data = {'title': 'qwer', 'content': '1234', 'starStatus': '1'}
       this.$axios({
         method: 'post',
         url: `http://107.150.124.179:8081/api/v1/articles/`,
@@ -72,7 +72,7 @@ export default {
         },
         data: this.qs.stringify(data)
       }).then(res => {
-        this.lists.push(data) // push是为了新增文章后列表也可以刷新，显示新增项（响应式）https://cn.vuejs.org/v2/guide/list.html数组更新检测
+        this.$articleList.push(data) // push是为了新增文章后列表也可以刷新，显示新增项（响应式）https://cn.vuejs.org/v2/guide/list.html数组更新检测
         console.log('res=>', res)
       })
     }
